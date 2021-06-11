@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
 import os
+import mimetypes
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from pathlib import Path
@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '.vercel.app'
 ]
+mimetypes.add_type("application/javascript", ".js", True)
 
 
 # Application definition
